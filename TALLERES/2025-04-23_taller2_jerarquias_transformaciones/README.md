@@ -24,11 +24,8 @@ Describe brevemente el objetivo del taller: ¿qué se pretende explorar, aplicar
 
 ## 🔧 Herramientas y Entornos
 
-
-- Python (`opencv-python`, `torch`, `mediapipe`, `diffusers`, etc.)
 - Unity (versión LTS, XR Toolkit, Shader Graph)
 - Three.js (`React Three Fiber`)
-- Processing
 
 ---
 
@@ -36,11 +33,8 @@ Describe brevemente el objetivo del taller: ¿qué se pretende explorar, aplicar
 
 ```
 YYYY-MM-DD_nombre_taller/
-├── processing/            # Processing
-├── python/                # Python
 ├── threejs/               # Three.js
 ├── unity/                 # Unity
-├── datos/                 # imágenes, audio, modelos, video
 ├── resultados/            # capturas, métricas, gifs
 ├── README.md
 ```
@@ -60,13 +54,6 @@ YYYY-MM-DD_nombre_taller/
 ### 🔹 Código relevante
 
 
-#### Python
-
-```python
-# example
-Code snippet
-```
-
 #### Unity
 
 ```csharp
@@ -81,24 +68,11 @@ Code snippet
 Code, snippet
 ```
 
-#### Processing
-
-```java
-// example
-Code snippet
-```
-
 
 
 ---
 ## 📊 Resultados Visuales
 
-
-### Processing
-![Processing](resultados/Processing.gif)
-
-### Python
-![Python](resultados/Python.gif)
 
 ### Unity
 ![Unity](resultados/Unity.gif)
@@ -110,15 +84,6 @@ Code snippet
 
 ## 🧩 Prompts Usados
 
-### Processing
-```text
-// Example
-```
-
-### Python
-```text
-// Example
-```
 
 ### Unity
 ```text
@@ -138,18 +103,6 @@ Code snippet
 - ¿Qué aprendiste o reforzaste con este taller?
 - ¿Qué parte fue más compleja o interesante?
 - ¿Qué mejorarías o qué aplicarías en futuros proyectos?
-
----
-
-## 👥 Contribuciones Grupales (si aplica)
-
-Describe exactamente lo que hiciste tú:
-
-```markdown
-- Programé el detector de postura en MediaPipe
-- Generé los GIFs y documentación
-- Integré el control de voz con visualización en Unity
-```
 
 ---
 
