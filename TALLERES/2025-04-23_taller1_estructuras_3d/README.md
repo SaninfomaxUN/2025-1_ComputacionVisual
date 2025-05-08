@@ -147,9 +147,9 @@ Usando Vite y React Three Fiber, crea una aplicación que cargue un modelo 3D en
 
 ## 💬 Reflexión Final
 
-- ¿Qué aprendiste o reforzaste con este taller?
-- ¿Qué parte fue más compleja o interesante?
-- ¿Qué mejorarías o qué aplicarías en futuros proyectos?
+Aprendí a trabajar con estructuras gráficas y a visualizar modelos 3D de manera efectiva. La diferencia entre vértices, aristas y caras se volvió más clara al implementarlo en Python y Three.js.
+
+La parte más interesante fue la visualización de los modelos 3D y cómo se pueden manipular en tiempo real con Three.js. Sin embargo, la parte más compleja fue el desarrollo en Python, ya que la biblioteca `vedo` ha tenido algunos cambios y no estaba completamente documentada.
 
 ---
 
@@ -157,9 +157,9 @@ Usando Vite y React Three Fiber, crea una aplicación que cargue un modelo 3D en
 ## ✅ Checklist de Entrega
 
 - [x] Carpeta `2025-04-23_taller1_estructuras_3d`
-- [ ] Código limpio y funcional
-- [ ] GIF incluido con nombre descriptivo
-- [ ] README completo y claro
-- [ ] Commits descriptivos en inglés
+- [x] Código limpio y funcional
+- [x] GIF incluido con nombre descriptivo
+- [x] README completo y claro
+- [x] Commits descriptivos en inglés
 
 ---
