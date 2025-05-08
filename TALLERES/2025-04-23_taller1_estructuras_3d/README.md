@@ -20,8 +20,7 @@ Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas 
 ## 🔧 Herramientas y Entornos
 
 
-- Python (`opencv-python`, `torch`, `mediapipe`, `diffusers`, etc.)
-- Unity (versión LTS, XR Toolkit, Shader Graph)
+- Python/Jupyter (`vedo`, `trymesh`)
 - Three.js (`typescript`, `@react-three/fiber`, `@react-three/drei`, `@three-stl-loader`)
 
 ---
@@ -32,9 +31,8 @@ Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas 
 2025-04-23_taller1_estructuras_3d/
 ├── python/                # Python
 ├── threejs/               # Three.js
-├── unity/                 # Unity
 ├── datos/                 # Modelo STL
-├── resultados/            # capturas, métricas, gifs
+├── resultados/            # GIFs
 ├── README.md
 ```
 
@@ -44,10 +42,12 @@ Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas 
 
 
 ### 🔹 Etapas realizadas
-1. Preparación de datos o escena.
-2. Aplicación de modelo o algoritmo.
-3. Visualización o interacción.
-4. Guardado de resultados.
+1. Carga de modelo 3D en formato .STL
+2. Extracción de vértices, aristas y caras
+3. Visualización de la malla 3D
+   - Vértices (puntos)
+   - Aristas (líneas)
+   - Caras (superficies)
 
 
 ### 🔹 Código relevante
@@ -56,15 +56,24 @@ Comprender las estructuras gráficas básicas que forman los modelos 3D (mallas 
 #### Python
 
 ```python
-# example
-Code snippet
-```
+mesh = trimesh.load('../datos/model.stl')
+# Obtener las aristas como índices de vértices
+edges_indices = mesh.edges_unique  # Formato: [ [v0, v1], [v2, v3], ... ]
 
-#### Unity
+# Convertir índices a coordenadas de vértices
+edge_points = []
+for idx in edges_indices:
+    v0 = mesh.vertices[idx[0]]  # Coordenadas del primer vértice
+    v1 = mesh.vertices[idx[1]]  # Coordenadas del segundo vértice
+    edge_points.append([v0, v1])  # Almacenar como segmentos de línea
+# Malla (caras)
+vedo_mesh = vedo.Mesh([mesh.vertices, mesh.faces], c='black', alpha=0.5)
 
-```csharp
-// example
-Code snippet
+# Aristas (usando las coordenadas convertidas)
+vedo_edges = vedo.Lines(edge_points, c='green5', lw=2)
+
+# Vértices
+vedo_vertices = vedo.Points(mesh.vertices, c='yellow', r=5)
 ```
 
 #### Three.js
@@ -108,12 +117,12 @@ return (
 ---
 ## 📊 Resultados Visuales
 
+### Modelo Base
+![Modelo Base](datos/model.png)
 
 ### Python
 ![Python](resultados/Python.gif)
 
-### Unity
-![Unity](resultados/Unity.gif)
 
 ### Three.js
 ![Three.js](resultados/Threejs.gif)
@@ -124,12 +133,7 @@ return (
 
 ### Python
 ```text
-// Example
-```
-
-### Unity
-```text
-// Example
+En un Jupyter Notebook, utiliza bibliotecas como trimesh, vedo, numpy y matplotlib para cargar y visualizar modelos 3D en formatos .OBJ, .STL o .GLTF. La malla debe mostrarse con colores diferenciados para vértices, aristas y caras, y se debe incluir una visualización que muestre información estructural del modelo, como la cantidad de vértices, aristas y caras. Como opción adicional, genera una animación que rote la malla para una mejor exploración visual.
 ```
 
 
