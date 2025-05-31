@@ -6,7 +6,7 @@ OscP5 osc;
 color fondoColor = color(30);
 float shapeX, shapeY;
 float circuloRadio = 80;
-boolean animar = true;
+boolean animar = false;
 String ultimoComando = "Esperando...";
 int forma = 0; // 0 = círculo, 1 = cuadrado, 2 = triángulo
 
@@ -29,15 +29,17 @@ void oscEvent(OscMessage theOscMessage) {
     println("Comando recibido: " + accion);
     ultimoComando = accion;
 
-    if (accion.equals("cambiar_color")) {
+    if (accion.equals("iniciar_animacion")) {
+      animar = true;
+    } else if (accion.equals("cambiar_color")) {
       fondoColor = color(random(255), random(255), random(255));
-    } else if (accion.equals("mover")) {
+    } else if (accion.equals("mover_objeto")) {
       shapeX = random(width);
       shapeY = random(height);
-    } else if (accion.equals("mostrar")) {
+    } else if (accion.equals("cambiar_forma")) {
       forma = (forma + 1) % 3; // Cambiar entre formas
     } else if (accion.equals("detener_animacion")) {
-      animar = !animar;
+      animar = false;
     }
   }
 }
