@@ -1,13 +1,13 @@
-# 🧪 Nombre del Taller
+# 🌐 Taller - WebSockets e Interacción Visual en Tiempo Real
 
 ## 📅 Fecha
-`YYYY-MM-DD`
+`2025-06-25`
 
 ---
 
 ## 🎯 Objetivo del Taller
 
-Describe brevemente el objetivo del taller: ¿qué se pretende explorar, aplicar o construir?
+Comprender cómo usar WebSockets para habilitar comunicación en tiempo real entre un cliente (interfaz visual) y un servidor. El objetivo es crear una visualización gráfica que reaccione dinámicamente a datos transmitidos por WebSocket.
 
 ---
 
@@ -25,21 +25,17 @@ Describe brevemente el objetivo del taller: ¿qué se pretende explorar, aplicar
 ## 🔧 Herramientas y Entornos
 
 
-- Python (`opencv-python`, `torch`, `mediapipe`, `diffusers`, etc.)
-- Unity (versión LTS, XR Toolkit, Shader Graph)
+- Python (`websockets`)
 - Three.js (`React Three Fiber`)
-- Processing
 
 ---
 
 ## 📁 Estructura del Proyecto
 
 ```
-YYYY-MM-DD_nombre_taller/
-├── processing/            # Processing
+2025-06-25_taller_websockets_interaccion_visual/
 ├── python/                # Python
 ├── threejs/               # Three.js
-├── unity/                 # Unity
 ├── datos/                 # imágenes, audio, modelos, video
 ├── resultados/            # capturas, métricas, gifs
 ├── README.md
@@ -63,29 +59,22 @@ YYYY-MM-DD_nombre_taller/
 #### Python
 
 ```python
-# example
-Code snippet
-```
+# Enviar datos en tiempo real con WebSockets
+while True:
+    data = generate_data()
+    await websocket.send(json.dumps(data))
+    await asyncio.sleep(0.5)
+    
+...
 
-#### Unity
-
-```csharp
-// example
-Code snippet
+# Servidor WebSocket en Python
+    async with websockets.serve(send_data, "localhost", 8700):
+        await asyncio.Future()
 ```
 
 #### Three.js
 
 ```javascript
-// example
-Code, snippet
-```
-
-#### Processing
-
-```java
-// example
-Code snippet
 ```
 
 
@@ -94,14 +83,8 @@ Code snippet
 ## 📊 Resultados Visuales
 
 
-### Processing
-![Processing](resultados/Processing.gif)
-
 ### Python
 ![Python](resultados/Python.gif)
-
-### Unity
-![Unity](resultados/Unity.gif)
 
 ### Three.js
 ![Three.js](resultados/Threejs.gif)
@@ -110,24 +93,16 @@ Code snippet
 
 ## 🧩 Prompts Usados
 
-### Processing
-```text
-// Example
-```
+
 
 ### Python
 ```text
-// Example
-```
-
-### Unity
-```text
-// Example
+Utiliza las librerías websockets y asyncio para crear un servidor WebSocket que genere y envíe datos en tiempo real a los clientes conectados. Cada 0.5 segundos, el servidor debe enviar un mensaje en formato JSON con estructura { 'x': ..., 'y': ..., 'color': ... }, donde los valores pueden ser coordenadas aleatorias y un color hexadecimal generado dinámicamente.
 ```
 
 ### Three.js
 ```text
-// Example
+
 ```
 
 
@@ -141,21 +116,10 @@ Code snippet
 
 ---
 
-## 👥 Contribuciones Grupales (si aplica)
-
-Describe exactamente lo que hiciste tú:
-
-```markdown
-- Programé el detector de postura en MediaPipe
-- Generé los GIFs y documentación
-- Integré el control de voz con visualización en Unity
-```
-
----
 
 ## ✅ Checklist de Entrega
 
-- [ ] Carpeta `YYYY-MM-DD_nombre_taller`
+- [x] Carpeta `2025-06-25_taller_websockets_interaccion_visual`
 - [ ] Código limpio y funcional
 - [ ] GIF incluido con nombre descriptivo
 - [ ] Visualizaciones o métricas exportadas
