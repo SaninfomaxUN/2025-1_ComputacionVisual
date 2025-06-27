@@ -75,6 +75,18 @@ while True:
 #### Three.js
 
 ```javascript
+// Establece el WebSocket
+useEffect(() => {
+    const ws = new WebSocket('ws://localhost:8700')
+
+    // Maneja los mensajes entrantes
+    ws.onmessage = (event) => {
+        const data = JSON.parse(event.data)
+        
+        // Actualiza la posición y color del objeto
+        setPosition({x: data.x, y: data.y})
+        setColor(data.color)
+    }
 ```
 
 
@@ -83,11 +95,9 @@ while True:
 ## 📊 Resultados Visuales
 
 
-### Python
-![Python](resultados/Python.gif)
+### Python + Three.js
+![PythonThreejs](resultados/PythonThreejs.gif)
 
-### Three.js
-![Three.js](resultados/Threejs.gif)
 
 ---
 
@@ -102,7 +112,7 @@ Utiliza las librerías websockets y asyncio para crear un servidor WebSocket que
 
 ### Three.js
 ```text
-
+En una aplicación web construida con React y Three.js (usando React Three Fiber), crea una escena 3D que incluya un objeto básico como una esfera o un cubo. Establece una conexión WebSocket desde el navegador al servidor WebSocket de Python creado previamente y utiliza los datos recibidos en tiempo real (por ejemplo, posición x, y y color) para actualizar dinámicamente la ubicación y el color del objeto en la escena. Asegura una actualización fluida y reactiva del objeto según los mensajes JSON que lleguen desde el servidor.
 ```
 
 
