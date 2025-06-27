@@ -16,7 +16,7 @@ const Figure = () => {
 
 const App = () => {
     return (
-        <Canvas shadows style={{width: '100vw', height: '100vh'}} dpr={[1, 2]}>
+        <Canvas shadows style={{ width: '100%', height: '100%'}} dpr={[1, 2]}>
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 10, 10]} />
             <Figure />
