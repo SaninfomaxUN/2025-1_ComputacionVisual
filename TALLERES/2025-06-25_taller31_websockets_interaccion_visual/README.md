@@ -13,12 +13,12 @@ Comprender cómo usar WebSockets para habilitar comunicación en tiempo real ent
 
 ## 🧠 Conceptos Aprendidos
 
-- [ ] Transformaciones geométricas (escala, rotación, traslación)
-- [ ] Segmentación de imágenes
-- [ ] Shaders y efectos visuales
-- [ ] Entrenamiento de modelos IA
-- [ ] Comunicación por gestos o voz
-- [ ] Otro: _______________________
+- [x] WebSockets: protocolo de comunicación bidireccional.
+- [x] Comunicación en tiempo real entre cliente y servidor.
+- [x] Interacción visual con Three.js y React.
+- [x] Envío y recepción de datos en formato JSON.
+- [x] Actualización dinámica de objetos 3D en respuesta a datos en tiempo real.
+- [x] Uso de `asyncio` y `websockets` en Python para manejar conexiones WebSocket.
 
 ---
 
@@ -34,10 +34,9 @@ Comprender cómo usar WebSockets para habilitar comunicación en tiempo real ent
 
 ```
 2025-06-25_taller_websockets_interaccion_visual/
-├── python/                # Python
+├── python/                # Jupyter
 ├── threejs/               # Three.js
-├── datos/                 # imágenes, audio, modelos, video
-├── resultados/            # capturas, métricas, gifs
+├── resultados/            # Resultados visuales
 ├── README.md
 ```
 
@@ -47,10 +46,12 @@ Comprender cómo usar WebSockets para habilitar comunicación en tiempo real ent
 
 
 ### 🔹 Etapas realizadas
-1. Preparación de datos o escena.
-2. Aplicación de modelo o algoritmo.
-3. Visualización o interacción.
-4. Guardado de resultados.
+1. Crear un servidor WebSocket en Python que envíe datos en tiempo real.
+2. Configurar un cliente WebSocket en Three.js para recibir y procesar esos datos.
+3. Actualizar dinámicamente una escena 3D en Three.js con los datos recibidos.
+4. Visualizar la interacción en tiempo real entre el servidor y el cliente.
+5. Documentar el proceso y resultados en un README claro.
+6. Incluir un GIF que muestre la interacción visual en acción.
 
 
 ### 🔹 Código relevante
@@ -96,7 +97,7 @@ useEffect(() => {
 
 
 ### Python + Three.js
-![PythonThreejs](resultados/PythonThreejs.gif)
+![Output](resultados/Output.gif)
 
 
 ---
@@ -121,8 +122,16 @@ En una aplicación web construida con React y Three.js (usando React Three Fiber
 ## 💬 Reflexión Final
 
 - ¿Qué aprendiste o reforzaste con este taller?
+
+Aprendí a implementar WebSockets para comunicación en tiempo real entre un servidor y un cliente, y cómo integrar esta funcionalidad con Three.js para crear visualizaciones interactivas.
+
 - ¿Qué parte fue más compleja o interesante?
+
+La parte más interesante fue la integración de WebSockets con Three.js, ya que permitió ver cómo los datos en tiempo real pueden influir directamente en la visualización 3D.
+
 - ¿Qué mejorarías o qué aplicarías en futuros proyectos?
+
+Mejoraría la robustez del manejo de errores en la conexión WebSocket y exploraría más sobre optimización de rendimiento para visualizaciones más complejas. 
 
 ---
 
@@ -130,10 +139,9 @@ En una aplicación web construida con React y Three.js (usando React Three Fiber
 ## ✅ Checklist de Entrega
 
 - [x] Carpeta `2025-06-25_taller_websockets_interaccion_visual`
-- [ ] Código limpio y funcional
-- [ ] GIF incluido con nombre descriptivo
-- [ ] Visualizaciones o métricas exportadas
-- [ ] README completo y claro
-- [ ] Commits descriptivos en inglés
+- [x] Código limpio y funcional
+- [x] GIF incluido con nombre descriptivo
+- [x] README completo y claro
+- [x] Commits descriptivos en inglés
 
 ---
