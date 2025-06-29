@@ -1,5 +1,5 @@
 {
-  "name": "nombre_taller",
+  "name": "2025-06-25_taller_dashboards_visuales_3d_sliders_botones",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^10.0.6",
     "@react-three/fiber": "^9.1.2",
+    "leva": "*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "^0.175.0"
